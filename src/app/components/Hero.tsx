@@ -275,7 +275,7 @@ export default function Hero() {
                 whileHover={{ x: '100%' }}
                 transition={{ duration: 0.5 }}
               />
-              <span className="relative z-10">Get In Touch</span>
+              <span className="relative z-10">Hire Me</span>
             </motion.a>
             <motion.a
               href="#projects"
