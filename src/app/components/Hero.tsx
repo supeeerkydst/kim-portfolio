@@ -253,7 +253,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Exploring the multiverse of technology, one line of code at a time
+            I transform your manual bottlenecks into streamlined digital systems. Explore my work to see how I replace 'paperwork' with 'process' to help you scale faster.
           </motion.p>
 
           <motion.div
