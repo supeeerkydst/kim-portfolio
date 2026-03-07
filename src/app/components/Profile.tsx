@@ -59,7 +59,7 @@ export default function Profile() {
               }}
             />
             <motion.img
-              src="public/kim.jpg"
+              src="https://raw.githubusercontent.com/supeeerkydst/kim-portfolio/refs/heads/main/public/kim.jpg"
               alt="Profile"
               className="relative rounded-2xl w-full h-[500px] object-cover border-2"
               style={{ borderColor: '#136C51' }}
