@@ -59,7 +59,7 @@ export default function Profile() {
               }}
             />
             <motion.img
-              src="https://drive.google.com/file/d/1_oUXg9Nfo0Xqt8vUzvcDHAZGkBczClky/view?usp=sharing"
+              src="public/kim.jpg"
               alt="Profile"
               className="relative rounded-2xl w-full h-[500px] object-cover border-2"
               style={{ borderColor: '#136C51' }}
