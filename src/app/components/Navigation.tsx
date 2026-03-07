@@ -9,7 +9,7 @@ const navItems = [
   { name: 'Projects', href: '#projects' },
   { name: 'Webinars', href: '#webinars' },
   { name: 'Organizations', href: '#organizations' },
-  { name: 'Contact', href: '#contact' }
+  { name: 'Hire Me', href: '#contact' }
 ];
 
 export default function Navigation() {
