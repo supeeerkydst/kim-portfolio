@@ -12,8 +12,8 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl mb-4 text-white">Let's Connect</h2>
-          <p className="text-gray-400 text-xl">Reach out across the multiverse</p>
+          <h2 className="text-5xl mb-4 text-white">HIRE ME</h2>
+          <p className="text-gray-400 text-xl">Let’s turn your manual friction into digital flow.</p>
         </motion.div>
 
         <motion.div
