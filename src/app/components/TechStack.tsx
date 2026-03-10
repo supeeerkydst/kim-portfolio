@@ -1,36 +1,93 @@
 import { motion } from 'motion/react';
 import { Code2, Database, Globe, Laptop, Server, Smartphone } from 'lucide-react';
+// Importing specific brand icons
+import { DiVisualstudio, DiMsqlServer  } from "react-icons/di";
+import { TiVendorMicrosoft } from "react-icons/ti";
+import { 
+  SiReact, 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiTailwindcss, 
+  SiVuedotjs, 
+  SiBootstrap,
+  SiNodedotjs, 
+  SiExpress, 
+  SiPython, 
+  SiPhp, 
+  SiDotnet,
+  SiMongodb, 
+  SiPostgresql, 
+  SiMysql, 
+  SiFirebase, 
+  SiAndroid, 
+  SiOpenjdk, 
+  SiDocker, 
+  SiGithubactions, 
+  SiVercel, 
+  SiNetlify, 
+  SiGit, 
+  SiFigma, 
+  SiPostman, 
+  SiJira
+} from 'react-icons/si';
 
 const techCategories = [
   {
     name: 'Frontend',
     icon: Globe,
-    techs: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vue.js', 'Bootstrap']
+    techs: [
+      { name: 'React', icon: SiReact },
+      { name: 'Next.js', icon: SiNextdotjs },
+      { name: 'TypeScript', icon: SiTypescript },
+      { name: 'Tailwind CSS', icon: SiTailwindcss },
+      { name: 'Vue.js', icon: SiVuedotjs },
+      { name: 'Bootstrap', icon: SiBootstrap },
+    ]
   },
   {
     name: 'Backend',
     icon: Server,
-    techs: ['Node.js', 'Express', 'Python', 'PHP', 'ASP.NET']
+    techs: [
+      { name: 'Node.js', icon: SiNodedotjs },
+      { name: 'Express', icon: SiExpress },
+      { name: 'Python', icon: SiPython },
+      { name: 'PHP', icon: SiPhp },
+      { name: 'ASP.NET', icon: SiDotnet },
+    ]
   },
   {
     name: 'Database',
     icon: Database,
-    techs: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'MS SQL Server']
-  },
-  {
-    name: 'Mobile',
-    icon: Smartphone,
-    techs: ['Java', 'Android', 'XAML']
+    techs: [
+      { name: 'MongoDB', icon: SiMongodb },
+      { name: 'PostgreSQL', icon: SiPostgresql },
+      { name: 'MySQL', icon: SiMysql },
+      { name: 'Firebase', icon: SiFirebase },
+      { name: 'MS SQL', icon: DiMsqlServer },
+    ]
   },
   {
     name: 'DevOps',
     icon: Laptop,
-    techs: ['Docker', 'AWS', 'GitHub Actions', 'Vercel', 'Netlify']
+    techs: [
+      { name: 'Docker', icon: SiDocker },
+      { name: 'GitHub', icon: SiGithubactions },
+      { name: 'Vercel', icon: SiVercel },
+      { name: 'Netlify', icon: SiNetlify },
+    ]
   },
   {
     name: 'Tools',
     icon: Code2,
-    techs: ['Git', 'VS Code', 'Figma', 'Postman', 'Jira', 'MS Office Applications']
+    techs: [
+      {name:'Git' , icon: SiGit},
+      {name:'VS Code' , icon: DiVisualstudio},
+      {name:'Figma' , icon: SiFigma},
+      {name:'Postman' , icon: SiPostman},
+      {name:'Jira' , icon: SiJira},
+      {name:'MS Office Applications' , icon: TiVendorMicrosoft},
+      
+    ]
   }
 ];
 
@@ -41,11 +98,9 @@ export default function TechStack() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl mb-4 text-white">Tech Stack</h2>
+          <h2 className="text-5xl mb-4 text-white font-bold">Tech Stack</h2>
           <p className="text-gray-400 text-xl">The tools I use to build amazing things</p>
         </motion.div>
 
@@ -55,50 +110,31 @@ export default function TechStack() {
               key={category.name}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ 
-                scale: 1.05,
-                rotateY: 5,
-                boxShadow: '0 10px 30px rgba(19, 108, 81, 0.3)'
-              }}
-              className="p-6 rounded-xl border-2 bg-black relative overflow-hidden"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+              className="p-6 rounded-xl border-2 bg-black relative overflow-hidden group"
               style={{ borderColor: '#136C51' }}
             >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-transparent to-[#136C51] opacity-0"
-                whileHover={{ opacity: 0.1 }}
-                transition={{ duration: 0.3 }}
-              />
-              
-              <div className="flex items-center gap-3 mb-4 relative z-10">
-                <motion.div
-                  whileHover={{ rotate: 360, scale: 1.2 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <category.icon className="w-6 h-6" style={{ color: '#136C51' }} />
-                </motion.div>
-                <h3 className="text-xl text-white">{category.name}</h3>
+              <div className="flex items-center gap-3 mb-6 relative z-10">
+                <category.icon className="w-6 h-6" style={{ color: '#136C51' }} />
+                <h3 className="text-xl font-semibold text-white">{category.name}</h3>
               </div>
               
-              <div className="flex flex-wrap gap-2 relative z-10">
+              <div className="flex flex-wrap gap-3 relative z-10">
                 {category.techs.map((tech, techIndex) => (
-                  <motion.span
-                    key={tech}
-                    className="px-3 py-1 rounded-full text-sm text-white cursor-default"
-                    style={{ backgroundColor: 'rgba(19, 108, 81, 0.2)', border: '1px solid #136C51' }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 + techIndex * 0.05 }}
-                    viewport={{ once: true }}
+                  <motion.div
+                    key={tech.name}
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm text-white"
+                    style={{ backgroundColor: 'rgba(19, 108, 81, 0.15)', border: '1px solid rgba(19, 108, 81, 0.3)' }}
                     whileHover={{ 
-                      scale: 1.1,
+                      scale: 1.1, 
                       backgroundColor: 'rgba(19, 108, 81, 0.4)',
-                      y: -2
+                      borderColor: '#136C51' 
                     }}
                   >
-                    {tech}
-                  </motion.span>
+                    <tech.icon className="w-4 h-4" />
+                    <span>{tech.name}</span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
