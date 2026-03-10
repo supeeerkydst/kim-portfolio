@@ -3,6 +3,7 @@ import { Code2, Database, Globe, Laptop, Server, Smartphone } from 'lucide-react
 // Importing specific brand icons
 import { DiVisualstudio, DiMsqlServer  } from "react-icons/di";
 import { TiVendorMicrosoft } from "react-icons/ti";
+import { TbBrandReactNative } from "react-icons/tb";
 import { 
   SiReact, 
   SiNextdotjs, 
@@ -64,6 +65,15 @@ const techCategories = [
       { name: 'MySQL', icon: SiMysql },
       { name: 'Firebase', icon: SiFirebase },
       { name: 'MS SQL', icon: DiMsqlServer },
+    ]
+  },
+  {
+    name: 'Mobile Development',
+    icon: Smartphone,
+    techs: [
+      { name: 'Java', icon: SiOpenjdk },
+      { name: 'Android', icon: SiFirebase },
+      { name: 'React Native', icon: TbBrandReactNative }
     ]
   },
   {
